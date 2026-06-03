@@ -137,11 +137,6 @@
     cards: function (sec) {
       var sub = sec.count + " " + ui("projects");
       var cards = (sec.items || []).map(function (item) {
-        var date = item.created
-          ? '<span class="card__date">' +
-              '<span class="material-symbols-rounded" aria-hidden="true">calendar_today</span>' +
-              escapeHtml(item.created) + "</span>"
-          : "";
         return '<a class="card card--link" data-item ' +
             'href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener" ' +
             'aria-label="' + escapeHtml(t(item.title)) + '">' +
@@ -150,7 +145,6 @@
             '<span class="material-symbols-rounded card__go" aria-hidden="true">arrow_outward</span>' +
           "</div>" +
           '<p class="card__summary">' + escapeHtml(t(item.desc)) + "</p>" +
-          '<div class="card__meta">' + date + "</div>" +
         "</a>";
       }).join("");
       return sectionHead(sec, sub) + '<div class="grid">' + cards + "</div>";
