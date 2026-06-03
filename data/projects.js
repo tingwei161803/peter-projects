@@ -22,11 +22,12 @@
 window.SITE_META = {
   title: { zh: "Peter's Projects", en: "Peter's Projects" },
   subtitle: {
-    zh: "近一個月公開上線的專案，依主題分類整理。",
-    en: "Recent public projects from the past month, sorted by theme.",
+    zh: "Peter 公開上線的專案，依主題分類整理。",
+    en: "Peter's public projects, sorted by theme.",
   },
   url: "https://tingwei161803.github.io/side-projects/",
   github: "https://github.com/tingwei161803",
+  linkedin: "https://www.linkedin.com/in/ai-med/",
 };
 
 // 分類（顯示順序 = 這個陣列的順序）。
