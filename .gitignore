@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Python (verify tooling runs via ephemeral `uv run --with`, not committed)
+.venv/
+__pycache__/
+*.pyc
