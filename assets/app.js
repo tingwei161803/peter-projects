@@ -25,12 +25,12 @@
   /* ---------- i18n strings (UI chrome only) ---------- */
   var I18N = {
     zh: {
-      footer: "使用 lazy-data2web 建置 · 純靜態，無建置流程。",
+      footer: "© 2026 Peter · 持續整理更新中",
       menu: "本頁導覽",
       projects: "個專案",
     },
     en: {
-      footer: "Built with lazy-data2web · static, no build step.",
+      footer: "© 2026 Peter · Always curating",
       menu: "On this page",
       projects: "projects",
     },
