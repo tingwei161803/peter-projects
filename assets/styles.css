@@ -146,7 +146,6 @@ a { color: inherit; text-decoration: none; }
   transition: background .15s, color .15s, border-color .15s;
 }
 .icon-btn:hover { background: var(--surface-2); color: var(--on-surface); }
-.icon-btn--ghost { border-color: var(--border); }
 .icon-btn__txt { font-size: .85rem; font-weight: 600; }
 .icon-btn .material-symbols-rounded { font-size: 20px; }
 
@@ -369,34 +368,6 @@ a { color: inherit; text-decoration: none; }
 }
 .card__date .material-symbols-rounded { font-size: 15px; }
 
-/* ---- CTA ---- */
-.section--cta { padding-top: 56px; padding-bottom: 24px; }
-.cta-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  padding: 52px 28px;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(120deg, var(--grad-a), var(--grad-b) 60%, var(--grad-c));
-  box-shadow: var(--shadow-lg);
-}
-.cta-card h2 { margin: 0 0 10px; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 900; letter-spacing: -.02em; }
-.cta-card p { margin: 0 auto 24px; max-width: 46ch; line-height: 1.6; opacity: .92; }
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #fff;
-  color: #2A2350;
-  padding: 13px 26px;
-  border-radius: 999px;
-  font-weight: 700;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow .15s, transform .15s;
-}
-.cta-btn:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-
 /* ---- Footer ---- */
 .footer {
   position: relative;
@@ -412,7 +383,6 @@ a { color: inherit; text-decoration: none; }
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
-  .icon-btn--ghost .icon-btn__txt { display: none; }
   .section { padding-top: 48px; }
   .hero__stat { flex: 1 1 40%; padding: 16px 20px; }
 }

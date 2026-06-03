@@ -28,21 +28,11 @@
       footer: "使用 lazy-data2web 建置 · 純靜態，無建置流程。",
       menu: "本頁導覽",
       projects: "個專案",
-      heroProjects: "專案",
-      heroCats: "分類",
-      ctaTitle: "想看更多？",
-      ctaText: "這些只是最近一個月的成果，更多專案都在 GitHub 上。",
-      ctaLink: "前往 GitHub",
     },
     en: {
       footer: "Built with lazy-data2web · static, no build step.",
       menu: "On this page",
       projects: "projects",
-      heroProjects: "Projects",
-      heroCats: "Categories",
-      ctaTitle: "Want more?",
-      ctaText: "These are just the past month's work — find the rest on GitHub.",
-      ctaLink: "Visit GitHub",
     },
   };
 
@@ -111,16 +101,6 @@
       });
     });
 
-    /* closing call-to-action -> GitHub profile */
-    sections.push({
-      type: "cta",
-      id: "more",
-      navIcon: "campaign",
-      title: { zh: I18N.zh.ctaTitle, en: I18N.en.ctaTitle },
-      text: { zh: I18N.zh.ctaText, en: I18N.en.ctaText },
-      link: { label: { zh: I18N.zh.ctaLink, en: I18N.en.ctaLink }, url: (META.github || "#") },
-    });
-
     return sections;
   }
 
@@ -174,22 +154,6 @@
         "</a>";
       }).join("");
       return sectionHead(sec, sub) + '<div class="grid">' + cards + "</div>";
-    },
-
-    /* ---- cta: closing call-to-action ---- */
-    cta: function (sec) {
-      var link = "";
-      if (sec.link && sec.link.url) {
-        link = '<a class="cta-btn" href="' + escapeHtml(sec.link.url) + '" ' +
-          'target="_blank" rel="noopener">' +
-          escapeHtml(t(sec.link.label)) +
-          '<span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></a>';
-      }
-      return '<div class="cta-card" data-item>' +
-        "<h2>" + escapeHtml(t(sec.title)) + "</h2>" +
-        (t(sec.text) ? "<p>" + escapeHtml(t(sec.text)) + "</p>" : "") +
-        link +
-      "</div>";
     },
   };
 
