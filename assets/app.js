@@ -50,6 +50,13 @@
       if (typeof window.gtag === "function") window.gtag("event", name, params || {});
     } catch (e) { /* analytics must never break the page */ }
   }
+  /* GA4 user properties — sticky per-user dims (set once with the INITIAL
+     language/theme so every event can be segmented by the visitor's default). */
+  function trackUserProps(props) {
+    try {
+      if (typeof window.gtag === "function") window.gtag("set", "user_properties", props || {});
+    } catch (e) { /* analytics must never break the page */ }
+  }
 
   /* ---------- global state ---------- */
   var state = {
@@ -231,6 +238,8 @@
     paintNav();
     paintSections();
     setupScrollSpy();
+    setupSectionViews();      // GA4: fire section_view once per section
+    setupCardImpressions();   // GA4: fire card_impression once per card
     animateCounters();
   }
 
@@ -297,6 +306,69 @@
     SECTIONS.forEach(function (sec) {
       var el = document.getElementById(sec.id);
       if (el) spyObserver.observe(el);
+    });
+  }
+
+  /* =======================================================================
+     GA4 VIEWABILITY — section_view + card_impression (each fires ONCE)
+
+     render() recreates the DOM on every language switch, so the observers are
+     rebuilt each time. The `seen*` maps live at module scope (NOT inside the
+     functions) so an already-counted section/card is never re-fired after a
+     repaint — counts stay honest, and card_impression ÷ project_click = CTR.
+     ===================================================================== */
+  var seenSections = {};
+  var sectionViewObserver = null;
+  function setupSectionViews() {
+    if (sectionViewObserver) { sectionViewObserver.disconnect(); sectionViewObserver = null; }
+    if (!("IntersectionObserver" in window)) return;
+    sectionViewObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var id = en.target.id;
+        sectionViewObserver.unobserve(en.target);
+        if (seenSections[id]) return;
+        seenSections[id] = true;
+        var sec = SECTIONS.filter(function (s) { return s.id === id; })[0];
+        track("section_view", {
+          section_id: id,
+          section_name: sec ? ((sec.title && (sec.title.en || sec.title.zh)) || id) : id,
+          language: state.lang,
+        });
+      });
+    }, { threshold: 0 });          // fires as soon as any part scrolls into view
+    SECTIONS.forEach(function (sec) {
+      if (seenSections[sec.id]) return;
+      var el = document.getElementById(sec.id);
+      if (el) sectionViewObserver.observe(el);
+    });
+  }
+
+  var seenCards = {};
+  var cardObserver = null;
+  function setupCardImpressions() {
+    if (cardObserver) { cardObserver.disconnect(); cardObserver = null; }
+    if (!("IntersectionObserver" in window)) return;
+    cardObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var card = en.target, pid = card.dataset.pid || "";
+        cardObserver.unobserve(card);
+        if (!pid || seenCards[pid]) return;
+        seenCards[pid] = true;
+        track("card_impression", {
+          project_id:    pid,
+          project_name:  card.dataset.name || "",
+          category:      card.dataset.cat || "",
+          category_name: card.dataset.catName || "",
+          language:      state.lang,
+        });
+      });
+    }, { threshold: 0.5 });        // half the card visible = a real impression
+    [].forEach.call(document.querySelectorAll(".card--link"), function (card) {
+      var pid = card.dataset.pid || "";
+      if (pid && seenCards[pid]) return;
+      cardObserver.observe(card);
     });
   }
 
@@ -369,6 +441,7 @@
   function init() {
     applyTheme();
     applyLangChrome();
+    trackUserProps({ ui_language: state.lang, ui_theme: state.theme });  // initial prefs
     render();
     wire();
   }
