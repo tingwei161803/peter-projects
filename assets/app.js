@@ -40,6 +40,17 @@
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* ignore */ } }
 
+  /* ---------- GA4 analytics: one safe wrapper for every click ----------
+     gtag() is loaded in index.html. It may be missing (ad-blockers, file://,
+     offline) — so we guard every call and never let analytics throw into the
+     UI. Each event ships rich, snake_case params; register them as Custom
+     Dimensions in GA4 Admin to see them broken down in reports. */
+  function track(name, params) {
+    try {
+      if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+    } catch (e) { /* analytics must never break the page */ }
+  }
+
   /* ---------- global state ---------- */
   var state = {
     lang:  lsGet("lang")  || "zh",       // default language: zh
@@ -93,6 +104,7 @@
       sections.push({
         type: "cards",
         id: "cat-" + cat.key,
+        key: cat.key,
         navIcon: cat.icon || "grid_view",
         accent: cat.accent,
         title: { zh: cat.zh, en: cat.en },
@@ -138,6 +150,10 @@
       var sub = sec.count + " " + ui("projects");
       var cards = (sec.items || []).map(function (item) {
         return '<a class="card card--link" data-item ' +
+            'data-pid="' + escapeHtml(item.id) + '" ' +
+            'data-cat="' + escapeHtml(sec.key) + '" ' +
+            'data-cat-name="' + escapeHtml(sec.title.en) + '" ' +
+            'data-name="' + escapeHtml(item.title.en || item.title.zh || item.id) + '" ' +
             'href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener" ' +
             'aria-label="' + escapeHtml(t(item.title)) + '">' +
           '<div class="card__top">' +
@@ -183,6 +199,11 @@
         "<span>" + escapeHtml(t(sec.title)) + "</span>";
       a.addEventListener("click", function (e) {
         e.preventDefault();
+        track("nav_click", {
+          section_id: sec.id,
+          section_name: (sec.title && sec.title.en) || (sec.title && sec.title.zh) || sec.id,
+          language: state.lang,
+        });
         var target = document.getElementById(sec.id);
         if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
         history.replaceState(null, "", "#" + sec.id);
@@ -301,12 +322,44 @@
     $("themeToggle").addEventListener("click", function () {
       state.theme = state.theme === "dark" ? "light" : "dark";
       applyTheme();
+      track("toggle_theme", { theme: state.theme });
     });
 
     $("langToggle").addEventListener("click", function () {
       state.lang = state.lang === "en" ? "zh" : "en";
       applyLangChrome();
+      track("toggle_language", { language: state.lang });
       render();                       // repaint EVERYTHING in the new language
+    });
+
+    /* project cards: ONE delegated listener on the persistent <main> survives
+       every language repaint. Records exactly which project each visitor opens. */
+    sectionsEl.addEventListener("click", function (e) {
+      var card = e.target.closest && e.target.closest(".card--link");
+      if (!card) return;
+      track("project_click", {
+        project_id:    card.dataset.pid || "",
+        project_name:  card.dataset.name || "",
+        category:      card.dataset.cat || "",
+        category_name: card.dataset.catName || "",
+        link_url:      card.getAttribute("href") || "",
+        language:      state.lang,
+      });
+    });
+
+    /* footer social links + brand/logo */
+    [].forEach.call(document.querySelectorAll(".footer__social a"), function (link) {
+      link.addEventListener("click", function () {
+        track("social_click", {
+          network:  (link.getAttribute("aria-label") || "social").toLowerCase(),
+          link_url: link.getAttribute("href") || "",
+          language: state.lang,
+        });
+      });
+    });
+    var brandLink = document.querySelector(".brand");
+    if (brandLink) brandLink.addEventListener("click", function () {
+      track("brand_click", { language: state.lang });
     });
   }
 
