@@ -40,9 +40,10 @@ window.SITE_CATEGORIES = [
   { key: "ai-trend", zh: "AI 產業趨勢 / 報告", en: "AI Industry Trends & Reports", icon: "trending_up", accent: "#7C3AED" },
   { key: "startup", zh: "創業 / 商業", en: "Startup & Business", icon: "rocket_launch", accent: "#EA580C" },
   { key: "ai-app", zh: "AI 技術 / 應用", en: "AI Tech & Applications", icon: "smart_toy", accent: "#0D9488" },
+  { key: "security", zh: "AI 安全 / 治理", en: "AI Security & Governance", icon: "security", accent: "#DC2626" },
 ];
 
-// 11 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
+// 14 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
 // title / desc 已依各站「實際頁面內容」校正（非 repo 名推測）。
 window.SITE_DATA = [
   // ── 科技活動 ──────────────────────────────────────────
@@ -172,5 +173,40 @@ window.SITE_DATA = [
     },
     created: "2026-05-24",
     url: "https://tingwei161803.github.io/Self-Improving-Company-with-AI/",
+  },
+
+  // ── AI 安全 / 治理 ────────────────────────────────────
+  {
+    id: "ai-governance",
+    category: "security",
+    title: { zh: "AI 治理百科", en: "AI Governance Encyclopedia" },
+    desc: {
+      zh: "從全球法規、國際標準、倫理安全到台灣在地的 AI 治理全景中文百科，含可搜尋術語表、互動時間軸與案例研究。",
+      en: "A panoramic encyclopedia of AI governance — from global regulation and standards to ethics and Taiwan-local context, with a searchable glossary, timeline and case studies.",
+    },
+    created: "2026-06-06",
+    url: "https://tingwei161803.github.io/ai-governance/",
+  },
+  {
+    id: "owasp",
+    category: "security",
+    title: { zh: "OWASP 旗艦專案導覽", en: "OWASP Flagship Projects" },
+    desc: {
+      zh: "11 個定義現代應用程式安全的 OWASP 旗艦專案，可搜尋或分類篩選，逐張卡片附中英雙語解說。",
+      en: "Eleven OWASP flagship projects that define modern application security — searchable and filterable, each with a bilingual breakdown.",
+    },
+    created: "2026-06-05",
+    url: "https://tingwei161803.github.io/owasp/",
+  },
+  {
+    id: "owasp-top-10-llm",
+    category: "security",
+    title: { zh: "OWASP LLM 應用十大風險 2025", en: "OWASP Top 10 for LLM Apps 2025" },
+    desc: {
+      zh: "官方《OWASP Top 10 for LLM Applications 2025》中英雙語導讀，整理生成式 AI 應用最關鍵的十大安全風險。",
+      en: "A bilingual reader of the official OWASP Top 10 for LLM Applications 2025 — the ten most critical risks for generative-AI apps.",
+    },
+    created: "2026-06-05",
+    url: "https://tingwei161803.github.io/owasp-top-10-llm/",
   },
 ];
