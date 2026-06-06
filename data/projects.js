@@ -41,9 +41,10 @@ window.SITE_CATEGORIES = [
   { key: "startup", zh: "創業 / 商業", en: "Startup & Business", icon: "rocket_launch", accent: "#EA580C" },
   { key: "ai-app", zh: "AI 技術 / 應用", en: "AI Tech & Applications", icon: "smart_toy", accent: "#0D9488" },
   { key: "security", zh: "AI 安全 / 治理", en: "AI Security & Governance", icon: "security", accent: "#DC2626" },
+  { key: "tools", zh: "工具 / 作品", en: "Tools & Works", icon: "build", accent: "#DB2777" },
 ];
 
-// 14 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
+// 15 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
 // title / desc 已依各站「實際頁面內容」校正（非 repo 名推測）。
 window.SITE_DATA = [
   // ── 科技活動 ──────────────────────────────────────────
@@ -208,5 +209,18 @@ window.SITE_DATA = [
     },
     created: "2026-06-05",
     url: "https://tingwei161803.github.io/owasp-top-10-llm/",
+  },
+
+  // ── 工具 / 作品 ───────────────────────────────────────
+  {
+    id: "lazy-html",
+    category: "tools",
+    title: { zh: "lazy-html · 把資料變成網頁", en: "lazy-html · Data into Web Pages" },
+    desc: {
+      zh: "給 Claude 用的小工具：丟給它文字、清單、檔案或一個主題，就能生出漂亮、可互動的網頁，不用寫程式。",
+      en: "A Claude tool that turns text, lists, files or a topic into a polished, interactive web page — no coding required.",
+    },
+    created: "2026-06-06",
+    url: "https://tingwei161803.github.io/lazy-html/",
   },
 ];
