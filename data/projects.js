@@ -44,7 +44,7 @@ window.SITE_CATEGORIES = [
   { key: "tools", zh: "工具 / 作品", en: "Tools & Works", icon: "build", accent: "#DB2777" },
 ];
 
-// 15 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
+// 21 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
 // title / desc 已依各站「實際頁面內容」校正（非 repo 名推測）。
 window.SITE_DATA = [
   // ── 科技活動 ──────────────────────────────────────────
@@ -58,6 +58,28 @@ window.SITE_DATA = [
     },
     created: "2026-06-01",
     url: "https://tingwei161803.github.io/COMPUTEX-2026/",
+  },
+  {
+    id: "medicaltaiwan-expo-2026",
+    category: "tech-event",
+    title: { zh: "Medical Taiwan 2026 醫療照護展", en: "Medical Taiwan 2026 Expo" },
+    desc: {
+      zh: "台灣國際醫療暨健康照護展第 20 屆（6/25–27 台北世貿一館）非官方雙語參觀導覽，聚焦創新長照、智慧醫療、醫材廊道三大主軸，約 330 家參展商。",
+      en: "An unofficial bilingual visitor's guide to the 20th Medical Taiwan expo (Jun 25–27, TWTC Hall 1): innovative elder care, smart healthcare and a medical-device corridor, with ~330 exhibitors.",
+    },
+    created: "2026-06-08",
+    url: "https://tingwei161803.github.io/medicaltaiwan-expo-2026/",
+  },
+  {
+    id: "semicon-2026",
+    category: "tech-event",
+    title: { zh: "SEMICON Taiwan 2026", en: "SEMICON Taiwan 2026" },
+    desc: {
+      zh: "SEMICON Taiwan 2026「Transform Tomorrow」非官方雙語導覽（9/2–4 南港 TaiNEX 1 & 2）：1,300+ 參展商、4,300+ 攤位、200+ 講者與 25+ 國際論壇。",
+      en: "An independent bilingual guide to SEMICON Taiwan 2026 — Transform Tomorrow (Sept 2–4, Taipei Nangang): 1,300+ exhibitors, 4,300+ booths, 200+ leaders and 25+ international forums.",
+    },
+    created: "2026-06-08",
+    url: "https://tingwei161803.github.io/semicon-2026/",
   },
 
   // ── AI 產業趨勢 / 報告 ────────────────────────────────
@@ -174,6 +196,50 @@ window.SITE_DATA = [
     },
     created: "2026-05-24",
     url: "https://tingwei161803.github.io/Self-Improving-Company-with-AI/",
+  },
+  {
+    id: "dreaming-chatgpt-better-memory",
+    category: "ai-app",
+    title: { zh: "ChatGPT 做夢記憶系統", en: "ChatGPT's Dreaming Memory" },
+    desc: {
+      zh: "OpenAI 2026/6/4 推出的 ChatGPT「做夢（Dreaming）」記憶系統非官方雙語整理：背景同步、三代演進、效能、控制與隱私。",
+      en: "An unofficial bilingual breakdown of ChatGPT's Dreaming memory system (launched Jun 4, 2026): background sync, three generations, performance, controls and privacy.",
+    },
+    created: "2026-06-05",
+    url: "https://tingwei161803.github.io/dreaming-chatgpt-better-memory/",
+  },
+  {
+    id: "agent-workflow-design",
+    category: "ai-app",
+    title: { zh: "Agent 工作流模式 · 六種 LLM 系統設計", en: "Agent Workflow Patterns · 6 LLM System Designs" },
+    desc: {
+      zh: "建構有效 LLM 系統的六種工作流／代理設計模式，佐證自 Anthropic、OpenAI、Google 等一手權威來源。",
+      en: "Six workflow and agent patterns for building effective LLM systems, grounded in primary sources from Anthropic, OpenAI and Google.",
+    },
+    created: "2026-06-06",
+    url: "https://tingwei161803.github.io/agent-workflow-design/",
+  },
+  {
+    id: "ai-sandbox-system-design",
+    category: "ai-app",
+    title: { zh: "AI 安全沙盒架構", en: "AI Sandbox Architecture" },
+    desc: {
+      zh: "安全執行 AI 產生之不可信程式碼的沙盒系統架構：Linux Namespace、Seccomp-BPF、Cgroup 與 Timeout，含互動式元件、資料流與隔離機制總覽。",
+      en: "A sandbox architecture for safely running untrusted, AI-generated code — Linux namespaces, seccomp-BPF, cgroups and timeouts — with an interactive tour of components, data flow and isolation.",
+    },
+    created: "2026-06-06",
+    url: "https://tingwei161803.github.io/ai-sandbox-system-design/",
+  },
+  {
+    id: "vibevoice-intro",
+    category: "ai-app",
+    title: { zh: "VibeVoice · 微軟開源長語音模型", en: "VibeVoice · Microsoft's Open Long-Form Speech Model" },
+    desc: {
+      zh: "微軟開源的長語音 AI 模型家族介紹：7.5Hz 連續語音 tokenizer、單次最長 90 分鐘、最多 4 位語者，含 TTS / ASR / Realtime 三個版本。",
+      en: "An intro to Microsoft's open-source long-form speech model family: a 7.5Hz continuous-speech tokenizer, up to 90 minutes and 4 speakers in one pass, across TTS / ASR / Realtime editions.",
+    },
+    created: "2026-06-07",
+    url: "https://tingwei161803.github.io/vibevoice-intro/",
   },
 
   // ── AI 安全 / 治理 ────────────────────────────────────
