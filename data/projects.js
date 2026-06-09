@@ -25,7 +25,7 @@ window.SITE_META = {
     zh: "Peter 公開上線的專案，依主題分類整理。",
     en: "Peter's public projects, sorted by theme.",
   },
-  url: "https://tingwei161803.github.io/side-projects/",
+  url: "https://www.peteraim.com/",
   github: "https://github.com/tingwei161803",
   linkedin: "https://www.linkedin.com/in/ai-med/",
 };
@@ -57,7 +57,7 @@ window.SITE_DATA = [
       en: "Highlights from COMPUTEX 2026 and the InnoVEX startup expo, focused on AI integration trends across the industry.",
     },
     created: "2026-06-01",
-    url: "https://tingwei161803.github.io/COMPUTEX-2026/",
+    url: "https://computex-2026.peteraim.com/",
   },
   {
     id: "medicaltaiwan-expo-2026",
@@ -68,7 +68,7 @@ window.SITE_DATA = [
       en: "An unofficial bilingual visitor's guide to the 20th Medical Taiwan expo (Jun 25–27, TWTC Hall 1): innovative elder care, smart healthcare and a medical-device corridor, with ~330 exhibitors.",
     },
     created: "2026-06-08",
-    url: "https://tingwei161803.github.io/medicaltaiwan-expo-2026/",
+    url: "https://medicaltaiwan-expo-2026.peteraim.com/",
   },
   {
     id: "semicon-2026",
@@ -79,7 +79,7 @@ window.SITE_DATA = [
       en: "An independent bilingual guide to SEMICON Taiwan 2026 — Transform Tomorrow (Sept 2–4, Taipei Nangang): 1,300+ exhibitors, 4,300+ booths, 200+ leaders and 25+ international forums.",
     },
     created: "2026-06-08",
-    url: "https://tingwei161803.github.io/semicon-2026/",
+    url: "https://semicon-2026.peteraim.com/",
   },
 
   // ── AI 產業趨勢 / 報告 ────────────────────────────────
@@ -92,7 +92,7 @@ window.SITE_DATA = [
       en: "A digest of Stanford's annual AI Index, tracking the key data and trends in global AI.",
     },
     created: "2026-06-03",
-    url: "https://tingwei161803.github.io/ai-index-report-2026/",
+    url: "https://ai-index-report-2026.peteraim.com/",
   },
   {
     id: "anthropic-agentic-coding-trend-2026",
@@ -103,7 +103,7 @@ window.SITE_DATA = [
       en: "How coding agents are reshaping software development workflows in 2026.",
     },
     created: "2026-06-01",
-    url: "https://tingwei161803.github.io/anthropic-agentic-coding-trend-2026/",
+    url: "https://anthropic-agentic-coding-trend-2026.peteraim.com/",
   },
   {
     id: "google-ai-agent-trends-2026",
@@ -114,7 +114,7 @@ window.SITE_DATA = [
       en: "A bilingual summary of Google Cloud's report on the five key shifts in AI agents for 2026.",
     },
     created: "2026-06-01",
-    url: "https://tingwei161803.github.io/google-ai-agent-trends-2026/",
+    url: "https://google-ai-agent-trends-2026.peteraim.com/",
   },
   {
     id: "a16z-big-ideas",
@@ -125,7 +125,7 @@ window.SITE_DATA = [
       en: "96 tech predictions from a16z for 2025–2026, browsable by category with reality checks.",
     },
     created: "2026-05-26",
-    url: "https://tingwei161803.github.io/a16z-big-ideas/",
+    url: "https://a16z-big-ideas.peteraim.com/",
   },
 
   // ── 創業 / 商業 ───────────────────────────────────────
@@ -138,7 +138,7 @@ window.SITE_DATA = [
       en: "A four-stage playbook for tech founders in the AI era: idea → MVP → launch → scale.",
     },
     created: "2026-05-19",
-    url: "https://tingwei161803.github.io/anthropic-the-founder-playbook/",
+    url: "https://anthropic-the-founder-playbook.peteraim.com/",
   },
   {
     id: "startup-asvda-org",
@@ -149,7 +149,7 @@ window.SITE_DATA = [
       en: "An unofficial roundup of the Top 100 finalists and winners of the Startup Bloom Grand Alliance Contest.",
     },
     created: "2026-05-31",
-    url: "https://tingwei161803.github.io/startup-asvda-org/",
+    url: "https://startup-asvda-org.peteraim.com/",
   },
 
   // ── AI 技術 / 應用 ────────────────────────────────────
@@ -162,7 +162,7 @@ window.SITE_DATA = [
       en: "A gallery of real GenAI use cases from hundreds of companies, filterable by industry and agent type.",
     },
     created: "2026-05-21",
-    url: "https://tingwei161803.github.io/real-world-genai-use-cases/",
+    url: "https://real-world-genai-use-cases.peteraim.com/",
   },
   {
     id: "codex-use-cases",
@@ -173,7 +173,7 @@ window.SITE_DATA = [
       en: "A bilingual gallery of 52 OpenAI Codex use cases, with examples and prompts.",
     },
     created: "2026-05-21",
-    url: "https://tingwei161803.github.io/codex-use-cases/",
+    url: "https://codex-use-cases.peteraim.com/",
   },
   {
     id: "claude-small-business",
@@ -184,7 +184,7 @@ window.SITE_DATA = [
       en: "Built for IT-free small businesses: 15 ready-made workflows to automate reconciliation, marketing, collections and more.",
     },
     created: "2026-05-21",
-    url: "https://tingwei161803.github.io/claude-small-business/",
+    url: "https://claude-small-business.peteraim.com/",
   },
   {
     id: "Self-Improving-Company-with-AI",
@@ -195,7 +195,7 @@ window.SITE_DATA = [
       en: "How to use AI to give a company the ability to optimize and continuously improve itself.",
     },
     created: "2026-05-24",
-    url: "https://tingwei161803.github.io/Self-Improving-Company-with-AI/",
+    url: "https://self-improving-company-with-ai.peteraim.com/",
   },
   {
     id: "dreaming-chatgpt-better-memory",
@@ -206,7 +206,7 @@ window.SITE_DATA = [
       en: "An unofficial bilingual breakdown of ChatGPT's Dreaming memory system (launched Jun 4, 2026): background sync, three generations, performance, controls and privacy.",
     },
     created: "2026-06-05",
-    url: "https://tingwei161803.github.io/dreaming-chatgpt-better-memory/",
+    url: "https://dreaming-chatgpt-better-memory.peteraim.com/",
   },
   {
     id: "agent-workflow-design",
@@ -217,7 +217,7 @@ window.SITE_DATA = [
       en: "Six workflow and agent patterns for building effective LLM systems, grounded in primary sources from Anthropic, OpenAI and Google.",
     },
     created: "2026-06-06",
-    url: "https://tingwei161803.github.io/agent-workflow-design/",
+    url: "https://agent-workflow-design.peteraim.com/",
   },
   {
     id: "ai-sandbox-system-design",
@@ -228,7 +228,7 @@ window.SITE_DATA = [
       en: "A sandbox architecture for safely running untrusted, AI-generated code — Linux namespaces, seccomp-BPF, cgroups and timeouts — with an interactive tour of components, data flow and isolation.",
     },
     created: "2026-06-06",
-    url: "https://tingwei161803.github.io/ai-sandbox-system-design/",
+    url: "https://ai-sandbox-system-design.peteraim.com/",
   },
   {
     id: "vibevoice-intro",
@@ -239,7 +239,7 @@ window.SITE_DATA = [
       en: "An intro to Microsoft's open-source long-form speech model family: a 7.5Hz continuous-speech tokenizer, up to 90 minutes and 4 speakers in one pass, across TTS / ASR / Realtime editions.",
     },
     created: "2026-06-07",
-    url: "https://tingwei161803.github.io/vibevoice-intro/",
+    url: "https://vibevoice-intro.peteraim.com/",
   },
 
   // ── AI 安全 / 治理 ────────────────────────────────────
@@ -252,7 +252,7 @@ window.SITE_DATA = [
       en: "A panoramic encyclopedia of AI governance — from global regulation and standards to ethics and Taiwan-local context, with a searchable glossary, timeline and case studies.",
     },
     created: "2026-06-06",
-    url: "https://tingwei161803.github.io/ai-governance/",
+    url: "https://ai-governance.peteraim.com/",
   },
   {
     id: "owasp",
@@ -263,7 +263,7 @@ window.SITE_DATA = [
       en: "Eleven OWASP flagship projects that define modern application security — searchable and filterable, each with a bilingual breakdown.",
     },
     created: "2026-06-05",
-    url: "https://tingwei161803.github.io/owasp/",
+    url: "https://owasp.peteraim.com/",
   },
   {
     id: "owasp-top-10-llm",
@@ -274,7 +274,7 @@ window.SITE_DATA = [
       en: "A bilingual reader of the official OWASP Top 10 for LLM Applications 2025 — the ten most critical risks for generative-AI apps.",
     },
     created: "2026-06-05",
-    url: "https://tingwei161803.github.io/owasp-top-10-llm/",
+    url: "https://owasp-top-10-llm.peteraim.com/",
   },
 
   // ── 工具 / 作品 ───────────────────────────────────────
@@ -287,6 +287,6 @@ window.SITE_DATA = [
       en: "A Claude tool that turns text, lists, files or a topic into a polished, interactive web page — no coding required.",
     },
     created: "2026-06-06",
-    url: "https://tingwei161803.github.io/lazy-html/",
+    url: "https://lazy-html.peteraim.com/",
   },
 ];
