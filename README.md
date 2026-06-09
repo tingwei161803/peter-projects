@@ -10,7 +10,7 @@
 
 | | |
 |---|---|
-| 🌐 網站 | <https://tingwei161803.github.io/side-projects/> |
+| 🌐 網站 | <https://www.peteraim.com/> |
 
 > 直接點進去就能用，無需安裝。每張卡片會在新分頁開啟對應專案的 GitHub Pages 網站。
 
