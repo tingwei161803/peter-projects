@@ -36,7 +36,8 @@ window.SITE_META = {
 //   icon   : Material Symbols 圖示名稱
 //   accent : 該分類的主題色（卡片 hover、標題標記會用到）
 window.SITE_CATEGORIES = [
-  { key: "tech-event", zh: "科技活動", en: "Tech Events", icon: "festival", accent: "#2563EB" },
+  { key: "tech-event", zh: "活動 / 展會", en: "Events & Expos", icon: "festival", accent: "#2563EB" },
+  { key: "healthtech", zh: "醫療 / 健康", en: "HealthTech", icon: "medical_services", accent: "#059669" },
   { key: "ai-trend", zh: "AI 產業趨勢 / 報告", en: "AI Industry Trends & Reports", icon: "trending_up", accent: "#7C3AED" },
   { key: "startup", zh: "創業 / 商業", en: "Startup & Business", icon: "rocket_launch", accent: "#EA580C" },
   { key: "ai-app", zh: "AI 技術 / 應用", en: "AI Tech & Applications", icon: "smart_toy", accent: "#0D9488" },
@@ -44,10 +45,10 @@ window.SITE_CATEGORIES = [
   { key: "tools", zh: "工具 / 作品", en: "Tools & Works", icon: "build", accent: "#DB2777" },
 ];
 
-// 21 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
+// 26 個專案（已移除 colm-info、10-Job-Search-Rules、appwork-analysis、career-choice）。
 // title / desc 已依各站「實際頁面內容」校正（非 repo 名推測）。
 window.SITE_DATA = [
-  // ── 科技活動 ──────────────────────────────────────────
+  // ── 活動 / 展會 ────────────────────────────────────────
   {
     id: "COMPUTEX-2026",
     category: "tech-event",
@@ -80,6 +81,41 @@ window.SITE_DATA = [
     },
     created: "2026-06-08",
     url: "https://semicon-2026.peteraim.com/",
+  },
+  {
+    id: "greater-south-ai-health",
+    category: "tech-event",
+    title: { zh: "大南方 AI 智慧健康展 2026", en: "Greater South AI Health Expo 2026" },
+    desc: {
+      zh: "2026 大南方 AI 智慧健康展（6/12–13 大臺南會展中心）資訊整理站：91 家參展業者與其醫療軟體／醫療 AI 解決方案，可搜尋、可篩選、中英雙語。",
+      en: "An info hub for the 2026 Greater South AI Health Expo (Jun 12–13, Tainan): 91 exhibitors and their medical-software / medical-AI solutions — searchable, filterable and bilingual.",
+    },
+    created: "2026-06-16",
+    url: "https://greater-south-ai-health.peteraim.com/",
+  },
+  {
+    id: "bio-asia-taiwan-2026",
+    category: "tech-event",
+    title: { zh: "2026 亞洲生技大展 BIO Asia–Taiwan", en: "BIO Asia–Taiwan 2026" },
+    desc: {
+      zh: "全球三大生技盛會之一（2026/7/15–19 台北南港展覽館）的多頁雙語導覽：大會概覽、展覽亮點、講者陣容、論壇與商機媒合、逐日議程與參展單位。",
+      en: "One of the world's three biggest biotech events (Jul 15–19, Taipei Nangang): a multi-page bilingual guide to the overview, highlights, speakers, forums, daily agenda and exhibitors.",
+    },
+    created: "2026-06-09",
+    url: "https://bio-asia-taiwan-2026.peteraim.com/",
+  },
+
+  // ── 醫療 / 健康 ────────────────────────────────────────
+  {
+    id: "tw-healthcare",
+    category: "healthtech",
+    title: { zh: "台灣醫療科技產業地圖", en: "Taiwan HealthTech Industry Guide" },
+    desc: {
+      zh: "把台灣醫療科技產業整理成 15 頁、中英雙語的導覽站：醫療軟體（主力）、數位健康與 AI、醫療器材、法規認證、產業生態與職涯，再加上給非醫療背景者的轉職學習中心。",
+      en: "Taiwan's health-tech industry across 15 bilingual pages: medical software (the focus), digital health & AI, devices, regulation, ecosystem and careers — plus a learning hub for newcomers from non-medical backgrounds.",
+    },
+    created: "2026-06-16",
+    url: "https://tw-healthcare.peteraim.com/",
   },
 
   // ── AI 產業趨勢 / 報告 ────────────────────────────────
@@ -150,6 +186,17 @@ window.SITE_DATA = [
     },
     created: "2026-05-31",
     url: "https://startup-asvda-org.peteraim.com/",
+  },
+  {
+    id: "all-vc-info",
+    category: "startup",
+    title: { zh: "跨國創投・加速器名錄", en: "Global VC & Accelerator Directory" },
+    desc: {
+      zh: "跨國創投／加速器名錄資料庫，涵蓋台灣、美國、日本、歐洲、南韓、東南亞、以色列、印度、加拿大，可搜尋與篩選。",
+      en: "A searchable directory of venture-capital firms and accelerators across Taiwan, the US, Japan, Europe, South Korea, Southeast Asia, Israel, India and Canada.",
+    },
+    created: "2026-06-02",
+    url: "https://all-vc-info.peteraim.com/",
   },
 
   // ── AI 技術 / 應用 ────────────────────────────────────
@@ -240,6 +287,17 @@ window.SITE_DATA = [
     },
     created: "2026-06-07",
     url: "https://vibevoice-intro.peteraim.com/",
+  },
+  {
+    id: "anthropic-self-service",
+    category: "ai-app",
+    title: { zh: "用 Claude 打造自助式數據分析", en: "Self-Service Analytics with Claude" },
+    desc: {
+      zh: "把 Anthropic 工程部落格〈How Anthropic Enables Self-Service Data Analytics with Claude〉整理成漂亮、可互動的雙語導讀。",
+      en: "Anthropic's engineering post 'How Anthropic Enables Self-Service Data Analytics with Claude,' turned into a polished, interactive bilingual read.",
+    },
+    created: "2026-06-06",
+    url: "https://anthropic-self-service.peteraim.com/",
   },
 
   // ── AI 安全 / 治理 ────────────────────────────────────
