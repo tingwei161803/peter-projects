@@ -34,7 +34,7 @@
 本站收錄的是**我自己**最近一個月公開、且已啟用 GitHub Pages 的專案連結。
 
 ```
-side-projects/
+peter-projects/
 ├── index.html          # 入口頁
 ├── data/
 │   └── projects.js      # 資料層：SITE_META / SITE_CATEGORIES / SITE_DATA
@@ -54,8 +54,8 @@ side-projects/
 
 ```bash
 # 1. clone 專案
-git clone https://github.com/tingwei161803/side-projects.git
-cd side-projects
+git clone https://github.com/tingwei161803/peter-projects.git
+cd peter-projects
 
 # 2a. 最簡單：直接開啟 index.html
 open index.html
